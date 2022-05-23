@@ -1,0 +1,42 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+    <body>
+
+        <!-- Navbar -->
+        <%- include("./partials/navbar.ejs") %>
+
+            <!-- Main -->
+            <main>
+                <form>
+                    <h2>Register</h2>
+
+                    <label for="name">Name:</label>
+                    <input type="text" name="displayName" id="displayName">
+                    <div class="errors name"></div>
+
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email">
+                    <div class="errors email"></div>
+
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password">
+                    <div class="errors password"></div>
+
+                    <button>Register</button>
+                </form>
+
+                <div class="register-image-container">
+                    <img src="/assets/register.svg" alt="register-image" class="register-image">
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <%- include("./partials/footer.ejs") %>
+
+                <!-- Link to script inside public folder -->
+                <script src="/scripts/register.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,27 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+    <body>
+
+        <!-- Navbar -->
+        <%- include("./partials/navbar.ejs") %>
+
+            <!-- Main -->
+            <main class="landing-main">
+                <div class="main-text">
+                    <h2>Oops...<br>There is something wrong with the URL.</h2>
+                    <a href="/">Homepage</a>
+                </div>
+                <div class="error-image-container">
+                    <img src="/assets/404.svg" alt="error-image" class="error-image">
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <%- include("./partials/footer.ejs") %>
+
+                <!-- CSS for 404 page is on landing.css -->
+
+    </body>
+
+</html>

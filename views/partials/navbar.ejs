@@ -1,0 +1,20 @@
+<nav>
+    <div class="logo-container">
+        <a href="/">
+            <img src="/assets/logo.svg" alt="logo" class="logo">
+        </a>
+        <h1>myCafe</h1>
+    </div>
+    <ul class="links">
+        <% if (user) { %>
+            <li class="displayName">
+                <%= user.name %>
+            </li>
+            <li><a href="/logout">Logout</a></li>
+            <li><a href="/create"><img src="/assets/create-icon.svg" alt="create-icon"></a></li>
+            <% } else { %>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+                <% } %>
+    </ul>
+</nav>

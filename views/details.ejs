@@ -1,0 +1,60 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+    <body>
+
+        <!-- Navbar -->
+        <%- include("./partials/navbar.ejs") %>
+
+            <!-- Main -->
+            <main class="recipe-details">
+
+                <h2 class="recipe-title">
+                    <%= data.title %>
+                </h2>
+
+                <div class="image-container">
+                    <img src="<%= data.url %>" alt="recipe-image"
+                        onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400?text=Recipe+Preview'">
+                </div>
+
+                <p class="cooking-time">
+                    Cooking Time: <span>
+                        <%= data.time %> minutes.
+                    </span>
+                </p>
+
+                <ul class="ingredients">
+                    <p>Ingredients:</p>
+                    <% data.ingredients.forEach(ing=> { %>
+                        <li>
+                            <%= ing %>
+                        </li>
+                        <% }) %>
+                </ul>
+
+                <div class="procedure">
+                    <p>Procedure:</p>
+                    <pre><%= data.procedure %></pre>
+                </div>
+
+                <p class="recipe-by">
+                    Recipe by: <span>
+                        <%= data.name %>
+                    </span>
+                </p>
+
+            </main>
+
+            <div class="all-recipes">
+                <a href="/recipes">All Recipes</a>
+            </div>
+
+
+
+            <!-- Footer -->
+            <%- include("./partials/footer.ejs") %>
+
+    </body>
+
+</html>

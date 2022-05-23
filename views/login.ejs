@@ -1,0 +1,38 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+    <body>
+
+        <!-- Navbar -->
+        <%- include("./partials/navbar.ejs") %>
+
+            <!-- Main -->
+            <main class="form-container">
+                <form>
+                    <h2>Login</h2>
+
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email">
+                    <div class="errors email"></div>
+
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password">
+                    <div class="errors password"></div>
+
+                    <button>Login</button>
+                </form>
+
+                <div class="login-image-container">
+                    <img src="/assets/login.svg" alt="login-image" class="login-image">
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <%- include("./partials/footer.ejs") %>
+
+                <!-- Link to script inside public folder -->
+                <script src="/scripts/login.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,24 @@
+footer {
+    margin-top: auto;
+    padding-top: 150px;
+    padding-bottom: 20px;
+    width: 100vw;
+    text-align: center;
+    justify-self: flex-end;
+}
+
+footer>span {
+    font-size: 1rem;
+    width: 100%;
+}
+
+footer>span>a {
+    font-weight: 500;
+}
+
+/* Media Queries */
+@media (max-width: 876px) {
+    footer>span {
+        font-size: 0.8rem;
+    }
+}

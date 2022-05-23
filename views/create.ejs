@@ -1,0 +1,61 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+    <body>
+
+        <!-- Navbar -->
+        <%- include("./partials/navbar.ejs") %>
+
+            <!-- Main -->
+            <main>
+                <form>
+                    <h2>Add a Recipe</h2>
+
+                    <label for="title">Recipe Title:</label>
+                    <input type="text" name="title" id="title">
+                    <div class="errors title"></div>
+
+                    <label for="ingredients">Ingredients:</label>
+                    <div class="ingredients-container">
+                        <input type="text" name="ingredients" id="ingredients">
+                        <button class="adder">Add</button>
+                    </div>
+                    <div class="errors ingredients"></div>
+
+                    <ul class="list-container"></ul>
+
+                    <label for="time">Cooking Time (Minutes):</label>
+                    <input type="number" name="time" id="time">
+                    <div class="errors time"></div>
+
+                    <label for="procedure">Procedure:</label>
+                    <textarea id="procedure" name="procedure"></textarea>
+                    <div class="errors procedure"></div>
+
+                    <label for="url">Image URL:</label>
+                    <input type="text" name="url" id="url">
+                    <div class="errors url"></div>
+
+                    <!-- Predefined User name -->
+                    <% if(user) { %>
+                        <input type="text" name="name" id="name" value="<%= user.name %>">
+                        <% } %>
+
+                            <button class="add-recipe-button">Add a Recipe</button>
+                            <button disabled class="loading-button hidden">Loading...</button>
+                </form>
+
+                <div class="create-image-container">
+                    <img src="/assets/create.svg" alt="create-image" class="create-image">
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <%- include("./partials/footer.ejs") %>
+
+                <!-- Link to script inside public folder -->
+                <script src="/scripts/create.js"></script>
+
+    </body>
+
+</html>

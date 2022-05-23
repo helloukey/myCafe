@@ -1,0 +1,76 @@
+.ingredients-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ingredients-container #ingredients {
+    width: 70%;
+    border-radius: 5px 0px 0px 5px;
+    margin-bottom: 0px;
+}
+
+.ingredients-container .adder {
+    height: 40px;
+    width: 30%;
+    border-radius: 0px 5px 5px 0px;
+    margin: 0px;
+    font-size: 1rem;
+    padding: 10px 20px;
+    align-self: flex-start;
+}
+
+.errors.ingredients,
+.errors.procedure {
+    margin: 10px auto;
+}
+
+.list-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.list {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    margin-left: 0;
+    background-color: var(--primary-color);
+    color: var(--text-secondary-color);
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.list::after {
+    content: "X";
+    margin-left: 10px
+}
+
+.list:hover::after {
+    color: var(--text-primary-color);
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 300px;
+    max-width: 100%;
+    min-width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: medium;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+#name {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}

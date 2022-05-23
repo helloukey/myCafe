@@ -1,0 +1,149 @@
+.recipe-details {
+    width: 60vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.recipe-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.image-container {
+    width: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 5px;
+}
+
+.cooking-time {
+    width: 100%;
+    font-size: 1rem;
+    margin: 10px 0;
+    font-weight: 500;
+    align-self: flex-start;
+}
+
+.cooking-time span {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.ingredients,
+.procedure {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.procedure {
+    margin-top: 0px;
+}
+
+.ingredients p,
+.procedure p {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.ingredients li {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.procedure pre {
+    white-space: pre-wrap;
+}
+
+.recipe-by {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+.recipe-by span {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.all-recipes {
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.all-recipes a {
+    font-size: 1rem;
+    width: 120px;
+    height: 50px;
+    border-radius: 5px;
+    padding: 15px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-secondary-color);
+}
+
+.all-recipes a:hover {
+    filter: saturate(1.2)
+}
+
+/* animatons */
+.recipe-details {
+    animation-name: recipe-details;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+@keyframes recipe-details {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 1280px) {
+    .recipe-details {
+        width: 70vw;
+    }
+}
+
+@media (max-width: 876px) {
+    .recipe-details {
+        width: 80vw;
+    }
+
+    .recipe-title {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .recipe-details {
+        width: 100%;
+    }
+
+    .recipe-title {
+        font-size: 2rem;
+    }
+}

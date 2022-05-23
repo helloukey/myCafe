@@ -1,0 +1,34 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+    <body>
+
+        <!-- Navbar -->
+        <%- include("./partials/navbar.ejs") %>
+
+            <!-- Main -->
+            <h2 class="recipes-main-text">Catch some amazing recipes by the local people.</h2>
+
+            <div class="card-container">
+                <% data.forEach(chunk=> { %>
+                    <a href="/recipes/<%= chunk._id %>">
+                        <div class="card">
+                            <img src="<%= chunk.url %>" alt="food-preview" class="thumbnail"
+                                onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400?text=Recipe+Preview'">
+                            <div class="card-content">
+                                <h3>
+                                    <%= chunk.title %>
+                                </h3>
+                                <p>Time Required: <%= chunk.time %> min</p>
+                            </div>
+                        </div>
+                    </a>
+                    <% }) %>
+            </div>
+
+            <!-- Footer -->
+            <%- include("./partials/footer.ejs") %>
+
+    </body>
+
+</html>
