@@ -39,6 +39,8 @@ A Simple Responsive Recipe Website made using [NodeJS](https://nodejs.org/), [Ex
 
 * Run the `node app` or `nodemon app` command to start the server.
 
+* Remove `secure: true` from the cookie parser options object located inside the `controllers/myController.js` file. <br/>**Note**: This will allow you to store cookies in development mode. In production mode, make sure to add `secure: true` again.
+
 * Finally, Preview this project locally by visiting the URL: `localhost:<PORT number>`
 ## Feedback
 
@@ -53,4 +55,3 @@ If you have any feedback, please reach out to me at kunalukey32@gmail.com
 ## License
 
 [MIT](LICENSE)
-
