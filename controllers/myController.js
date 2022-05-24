@@ -73,7 +73,6 @@ const registerPOST = async (req, res, next) => {
     res.cookie("jwt", token, {
       maxAge: 1000 * 60 * 60 * 24 * 3,
       httpOnly: true,
-      secure: true
     });
     res.status(201).json({ user: user._id });
   } catch (err) {
@@ -97,7 +96,6 @@ const loginPOST = async (req, res) => {
     res.cookie("jwt", token, {
       maxAge: 1000 * 60 * 60 * 24 * 3,
       httpOnly: true,
-      secure: true
     });
     res.status(201).json({ user: user._id });
   } catch (err) {
