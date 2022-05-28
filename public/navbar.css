@@ -36,6 +36,7 @@ h1 {
     color: var(--primary-color);
 }
 
+/* Create Recipe Icon */
 .links > li:last-child > a > img {
     display: flex;
     justify-content: center;
