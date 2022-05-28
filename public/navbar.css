@@ -32,6 +32,16 @@ h1 {
     border-radius: 4px;
 }
 
+.links > li > a:hover {
+    color: var(--primary-color);
+}
+
+.links > li:last-child > a > img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Media Queries */
 @media (max-width: 456px) {
     nav {
