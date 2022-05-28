@@ -53,6 +53,20 @@ form button:hover {
     filter: saturate(1.2)
 }
 
+.register-login-container {
+    margin: 20px auto auto auto;
+}
+
+.register-login-container > p > a {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.register-login-container > p > a:hover {
+    filter: saturate(1.2);
+    text-decoration: underline;
+}
+
 .login-image,
 .register-image,
 .create-image {
