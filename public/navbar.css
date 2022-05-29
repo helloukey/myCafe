@@ -97,7 +97,7 @@ li.create-recipe-text {
     }
 
     .links>li>a,
-    .links>li>a:active {
+    .links>li>a:hover {
         color: var(--text-secondary-color);
     }
 
