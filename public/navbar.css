@@ -96,7 +96,8 @@ li.create-recipe-text {
         font-size: 1.2rem;
     }
 
-    .links>li>a {
+    .links>li>a,
+    .links>li>a:active {
         color: var(--text-secondary-color);
     }
 
