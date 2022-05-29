@@ -11,10 +11,22 @@
                 <%= user.name %>
             </li>
             <li><a href="/logout">Logout</a></li>
-            <li><a href="/create"><img src="/assets/create-icon.svg" alt="create-icon"></a></li>
+            <li class="create-recipe-icon-container">
+                <a href="/create">
+                    <img src="/assets/create-icon.svg" alt="create-icon" class="create-recipe-icon">
+                </a>
+            </li>
+            <li class="create-recipe-text">
+                <a href="/create">Create Recipe</a>
+            </li>
             <% } else { %>
                 <li><a href="/login">Login</a></li>
                 <li><a href="/register">Register</a></li>
                 <% } %>
     </ul>
 </nav>
+
+<img src="/assets/menu-icon.svg" alt="menu-icon" class="menu-icon">
+<img src="/assets/cancel-icon.svg" alt="cancel-icon" class="cancel-icon hidden">
+
+<script src="/scripts/navbar.js"></script>
