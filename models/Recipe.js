@@ -27,7 +27,7 @@ const recipeSchema = new Schema (
     url: {
       type: String,
       required: [true, "Image URL is required."],
-      validate: [isImageURL, "Please enter a valid URL."],
+      validate: [isImageURL, "Please enter a valid Image URL."],
     },
     name: {
       type: String,
