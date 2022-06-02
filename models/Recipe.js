@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const { isURL } = require("validator");
+const isImageURL = require('image-url-validator').default;
 
-const recipeSchema = new Schema(
+const recipeSchema = new Schema (
   {
     title: {
       type: String,
@@ -27,7 +27,7 @@ const recipeSchema = new Schema(
     url: {
       type: String,
       required: [true, "Image URL is required."],
-      validate: [isURL, "Please enter a valid URL."],
+      validate: [isImageURL, "Please enter a valid URL."],
     },
     name: {
       type: String,
