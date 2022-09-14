@@ -3,6 +3,9 @@ const recipeForm = document.querySelector("form");
 const emailError = document.querySelector(".errors.email");
 const passwordError = document.querySelector(".errors.password");
 const allErrors = document.querySelectorAll(".errors");
+const showIcon = document.querySelector(".show-icon");
+const hideIcon = document.querySelector(".hide-icon");
+const credentialsContainer = document.querySelector(".credentials-container");
 
 // Login Form
 recipeForm.addEventListener("submit", async (e) => {
@@ -48,3 +51,16 @@ recipeForm.addEventListener("submit", async (e) => {
     console.log(err);
   }
 });
+
+// Demo Credentials
+hideIcon.onclick = () => {
+  credentialsContainer.classList.remove("hidden");
+  showIcon.classList.remove("hidden");
+  hideIcon.classList.add("hidden");
+}
+
+showIcon.onclick = () => {
+  credentialsContainer.classList.add("hidden");
+  showIcon.classList.add("hidden");
+  hideIcon.classList.remove("hidden");
+}

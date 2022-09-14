@@ -74,6 +74,43 @@ form button:hover {
     height: auto;
 }
 
+/* Demo credentials */
+.demo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0 0 0;
+    padding: 0;
+}
+
+.demo-name {
+    margin: 0;
+    padding: 0;
+}
+
+.show-icon, .hide-icon {
+    width: 20px;
+    height: auto;
+    margin: 1px 0 0 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.credentials-container {
+    margin: 10px 0 0 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.email-credential, .password-credential {
+    margin: 0;
+    padding: 0;
+    color: var(--text-secondary-color);
+}
+
 /* Animatons */
 form {
     animation-name: swipe;
